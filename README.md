@@ -2,7 +2,7 @@
 
 ### About
 
-IpInput component for react(>=0.14).
+IpInput component for antd.
 
 Based on http://lizheming.github.io/Iput。
 
@@ -36,7 +36,7 @@ Based on http://lizheming.github.io/Iput。
 
 run `npm start` and open `http://localhost:8080`
 
-online example: http://lizheming.github.io/IpInput
+online example: http://kgloveyou.github.io/IpInput
 
 ### License
 
