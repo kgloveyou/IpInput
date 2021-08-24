@@ -36,7 +36,7 @@ Based on http://lizheming.github.io/Iput。
 
 run `npm start` and open `http://localhost:8080`
 
-online example: http://kgloveyou.github.io/IpInput
+online example: https://codesandbox.io/s/a-ipinput-demo-y7vxw
 
 ### License
 
