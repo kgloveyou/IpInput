@@ -130,7 +130,7 @@ export default class IpInput extends React.Component {
     return (
       <div className={className}>
         {value.map((val, i) =>
-        <>
+        <div style={{display: 'inline'}} key={`wrapper-${i}`}>
           <div className="react-ip-input__item" key={i}>
             <Input
               ref={el => this[`_input-${i}`] = el}
@@ -143,7 +143,7 @@ export default class IpInput extends React.Component {
             />
           </div>
           {i !== 3 ? <i key={`i-${i}`}>.</i> : null}
-        </>
+        </div>
         )}
       </div>
     );
