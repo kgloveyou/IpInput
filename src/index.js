@@ -139,10 +139,11 @@ export default class IpInput extends React.Component {
               onChange={e => this.handleChange(e, i)}
               onKeyDown={e => this.handleKeyDown(e, i)}
               onPaste={e => this.handlePaste(e, i)}
+              key={`input-${i}`}
             />
           </div>
-            {i !== 3 ? <i>.</i> : <></>}
-          </>
+          {i !== 3 ? <i key={`i-${i}`}>.</i> : null}
+        </>
         )}
       </div>
     );
