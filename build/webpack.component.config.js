@@ -6,7 +6,7 @@ const common = require('./webpack.common');
 module.exports = merge({
   mode: 'production',
   entry: {
-    iput: path.resolve(__dirname, '../src/index.js')
+    ipinput: path.resolve(__dirname, '../src/index.js')
   },
   output: {
     path: path.resolve(__dirname, '../lib'),
