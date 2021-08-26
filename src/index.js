@@ -12,7 +12,8 @@ export default class IpInput extends React.Component {
     className: '',
     defaultValue: '...',
     isError: () => false,
-    onChange: new Function()
+    onChange: new Function(),
+    disabled: false,
   }
   /**
    * set prop type
@@ -21,7 +22,8 @@ export default class IpInput extends React.Component {
     className: PropTypes.string,
     defaultValue: PropTypes.string || PropTypes.array,
     isError: PropTypes.func,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+    disabled: PropTypes.bool
   }
   /**
    * default state value
@@ -119,6 +121,7 @@ export default class IpInput extends React.Component {
 
   render() {
     const { value } = this.state;
+    const { disabled } = this.props;
     const ip = value.map(val => isNaN(val) ? '' : val).join('.');
 
     const className = [
@@ -140,6 +143,7 @@ export default class IpInput extends React.Component {
               onKeyDown={e => this.handleKeyDown(e, i)}
               onPaste={e => this.handlePaste(e, i)}
               key={`input-${i}`}
+              disabled={disabled}
             />
           </div>
           {i !== 3 ? <i key={`i-${i}`}>.</i> : null}
