@@ -10,7 +10,7 @@ export default class IpInput extends React.Component {
    */
   static defaultProps = {
     className: '',
-    defaultValue: '...',
+    value: '...',
     isError: () => false,
     onChange: new Function(),
     disabled: false,
@@ -20,7 +20,7 @@ export default class IpInput extends React.Component {
    */
   static propTypes = {
     className: PropTypes.string,
-    defaultValue: PropTypes.string || PropTypes.array,
+    value: PropTypes.string || PropTypes.array,
     isError: PropTypes.func,
     onChange: PropTypes.func,
     disabled: PropTypes.bool
@@ -33,7 +33,7 @@ export default class IpInput extends React.Component {
   }
 
   componentDidMount() {
-    let { defaultValue: value } = this.props;
+    let { value: value } = this.props;
     if (!Array.isArray(value)) {
       value = value.split('.');
     }
